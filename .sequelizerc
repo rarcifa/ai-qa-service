@@ -1,0 +1,9 @@
+import { resolve } from 'path';
+
+export default {
+  env: process.env.NODE_ENV || 'development',
+  config: path.resolve('dist', 'lib', 'db', 'config', 'config.js'),
+  'models-path': resolve('dist', 'lib', 'db', 'models'),
+  'seeders-path': resolve('dist', 'lib', 'db', 'seeders'),
+  'migrations-path': resolve('dist', 'lib', 'db', 'migrations'),
+};

@@ -1,0 +1,127 @@
+[
+  {
+    "name": "Dave",
+    "appStoreId": "1193801909",
+    "googlePlayId": "com.dave"
+  },
+  {
+    "name": "Brigit",
+    "appStoreId": "1341884073",
+    "googlePlayId": "com.hellobrigit.Brigit"
+  },
+  {
+    "name": "Earnin",
+    "appStoreId": "723815926",
+    "googlePlayId": "com.activehours"
+  },
+  {
+    "name": "MoneyLion",
+    "appStoreId": "1064677082",
+    "googlePlayId": "com.moneylion"
+  },
+  {
+    "name": "Gerald",
+    "appStoreId": "1569801600",
+    "googlePlayId": "com.geraldwallet"
+  },
+  {
+    "name": "Beem",
+    "appStoreId": "1525101476",
+    "googlePlayId": "com.useline.line"
+  },
+  {
+    "name": "Klover",
+    "appStoreId": "1471211372",
+    "googlePlayId": "com.klovercredit.android_app"
+  },
+  {
+    "name": "FloatMe",
+    "appStoreId": "1395667279",
+    "googlePlayId": "io.floatme.floatmeapp"
+  },
+  {
+    "name": "Cleo",
+    "appStoreId": "1447274646",
+    "googlePlayId": "com.meetcleo.cleo"
+  },
+  {
+    "name": "Empower",
+    "appStoreId": "1047978697",
+    "googlePlayId": "finance.empower"
+  },
+  {
+    "name": "Branch",
+    "appStoreId": "1047978697",
+    "googlePlayId": "com.branchmessenger"
+  },
+  {
+    "name": "Possible: Fast Cash & Credit",
+    "appStoreId": "1380384597",
+    "googlePlayId": "com.possible_mobile"
+  },
+  {
+    "name": "Vola Finance",
+    "appStoreId": "1275913039",
+    "googlePlayId": "com.messapps.vola"
+  },
+  {
+    "name": "OneBlinc",
+    "appStoreId": "1593417965",
+    "googlePlayId": "com.oneblinc.blincadvance.dev"
+  },
+  {
+    "name": "B9: Get Cash Advance Instant",
+    "appStoreId": "1552004842",
+    "googlePlayId": "com.b9.app"
+  },
+  {
+    "name": "Tapcheck: On-Demand Earnings",
+    "appStoreId": "1482944292",
+    "googlePlayId": "com.tapcheck.tapcheck"
+  },
+  {
+    "name": "Albert",
+    "appStoreId": "1057771088",
+    "googlePlayId": "com.meetalbert"
+  },
+  {
+    "name": "Dayforce Wallet: On-demand Pay",
+    "appStoreId": "1497887283",
+    "googlePlayId": "com.dayforce.wallet"
+  },
+  {
+    "name": "ONE@Work (formerly Even)",
+    "appStoreId": "1147769190",
+    "googlePlayId": "com.even.harmony"
+  },
+  {
+    "name": "Chime",
+    "appStoreId": "836215269",
+    "googlePlayId": "com.onedebit.chime"
+  },
+  {
+    "name": "Kora Money College Student App",
+    "appStoreId": "1478980460",
+    "googlePlayId": "com.tapcheck.tapcheck"
+  },
+  {
+    "name": "Prosper: Personal Loans",
+    "appStoreId": "1506637917",
+    "googlePlayId": "com.prosper.borrower.mobile"
+  },
+  {
+    "name": "Klarna | Shop now. Pay later.",
+    "appStoreId": "1115120118",
+    "googlePlayId": "com.myklarnamobile"
+  },
+  {
+    "name": "Rain Instant Pay",
+    "appStoreId": "1492069669",
+    "googlePlayId": "us.rain.app"
+  },
+  {
+    "name": "Grid Money",
+    "appStoreId": "1473180914",
+    "googlePlayId": "com.hatfield.grid"
+  }
+]
