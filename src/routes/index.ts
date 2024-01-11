@@ -1,4 +1,4 @@
-import appRoutes from '@routes/app-routes';
+import chatbotRoutes from '@routes/chatbot-routes';
 import healthRoutes from '@routes/health-routes';
 import * as express from 'express';
 
@@ -15,6 +15,6 @@ import * as express from 'express';
  */
 export const register = (app: express.Application): void => {
   app.get('/');
-  app.use('(/api)?/v1/chatbot-service', appRoutes);
+  app.use('(/api)?/v1/chatbot-service', chatbotRoutes);
   app.use('/healthcheck', healthRoutes);
 };

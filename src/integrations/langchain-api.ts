@@ -1,13 +1,12 @@
+import { HNSWLib } from '@langchain/community/vectorstores/hnswlib';
 import { VectorStoreRetriever } from '@langchain/core/vectorstores';
+import { OpenAI, OpenAIEmbeddings } from '@langchain/openai';
 import { loadQARefineChain, RetrievalQAChain } from 'langchain/chains';
 import { ChainValues } from 'langchain/dist/schema';
 import { DirectoryLoader } from 'langchain/document_loaders/fs/directory';
 import { JSONLoader } from 'langchain/document_loaders/fs/json';
 import { TextLoader } from 'langchain/document_loaders/fs/text';
-import { OpenAIEmbeddings } from 'langchain/embeddings/openai';
-import { OpenAI } from 'langchain/llms/openai';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
-import { HNSWLib } from 'langchain/vectorstores/hnswlib';
 
 import { logger } from '@helpers/logger';
 

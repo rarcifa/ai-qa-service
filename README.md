@@ -39,6 +39,24 @@ The AI Chatbot Service is a Node.js TypeScript application designed to host chat
 npm install
 ```
 
+### Important Configuration for Langchain Module
+
+When using the Langchain module in acommonJS environment, you might encounter compatibility issues related to the module system (specifically, conflicts between CommonJS and Node's native ESM support). To address this, a small modification is required in the Langchain module files.
+
+Files to Modify:
+
+- `node_modules/langchain/dist/document_loaders/fs/directory.d.ts`
+- `node_modules/langchain/dist/document_loaders/fs/text.d.ts`
+
+Required Change:
+In both of these files, you'll find one or more lines at the beginning that looks like this:
+
+```ts
+<reference types="node" resolution-mode="require" />
+```
+
+This line is intended for TypeScript to correctly reference Node.js types. However, due to the incompatibility issues with the Node 16 version and the CommonJS module format, this reference can cause problems.
+
 ### Running the Service
 
 1. Compile TypeScript files to JavaScript:

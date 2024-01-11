@@ -1,11 +1,11 @@
-import { controller } from '@handlers/apps/controller';
-import * as validate from '@handlers/apps/validator';
+import { controller } from '@handlers/chatbot/controller';
+import * as validate from '@handlers/chatbot/validator';
 import { middleware } from '@lib/middlewares/auth.middleware';
 import { verifyErrors } from '@lib/middlewares/validation.middleware';
 
-import { appRouter } from '@helpers/constants';
+import { chatbotRouter } from '@helpers/constants';
 
-appRouter.post(
+chatbotRouter.post(
   '/generate/query',
   middleware.authorizehWrite,
   validate.queryValdiator,
@@ -13,4 +13,4 @@ appRouter.post(
   controller.generateQuery
 );
 
-export default appRouter;
+export default chatbotRouter;

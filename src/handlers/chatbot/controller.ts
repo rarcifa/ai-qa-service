@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { service } from '@services/apps';
+import { service } from '@services/chatbot';
 
 import { HTTP_CODES, HTTP_STATUS } from '@lib/interfaces/status';
 

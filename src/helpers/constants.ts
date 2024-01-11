@@ -32,7 +32,7 @@ export const OPENAI_API_KEY: string = process.env.OPENAI_API_KEY || '';
 export const BING_SEARCH_V7_SUBSCRIPTION_KEY: string = process.env.BING_SEARCH_V7_SUBSCRIPTION_KEY || '';
 
 // router
-export const appRouter: Router = express.Router();
+export const chatbotRouter: Router = express.Router();
 export const healthRouter: Router = express.Router();
 
 // misc
