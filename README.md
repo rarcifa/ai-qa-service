@@ -8,6 +8,8 @@
 
 The AI Chatbot Service is a Node.js TypeScript application designed to host chatbot services utilizing the LangChain library and OpenAI integrations. This document provides detailed instructions on setting up, configuring, and running the service, including Docker containerization and security key generation.
 
+![Diagrame](https://i.postimg.cc/Fm3Zqhgv/architecture-diagram.jpg)
+
 ## Table of Contents
 
 1. [Prerequisites](#prerequisites)
