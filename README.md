@@ -44,7 +44,7 @@ npm install
 1. Compile TypeScript files to JavaScript:
 
 ```bash
-tsc
+npm run build
 ```
 
 2. Run the service in development mode:
@@ -58,13 +58,24 @@ npm run dev
 1. Build the Docker image using the provided Dockerfile:
 
 ```bash
-docker build -f .docker/build.dockerfile -t chatbot-app-service .
+docker build -f .docker/build.dockerfile -t ai-chatbot-service .
 ```
 
 2. Run the service using Docker:
 
 ```bash
-docker run -it --init chatbot-app-service
+docker run -it --init \
+  -e DB_HOST=your_db_host \
+  -e DB_NAME=your_db_name \
+  -e DB_USERNAME=your_db_username \
+  -e DB_PASSWORD=your_db_password \
+  -e NODE_ENV=your_node_env \
+  -e OPENAI_API_KEY=your_openai_api_key \
+  -e CHATBOT_READ_API_KEY=your_chatbot_read_api_key \
+  -e CHATBOT_READ_API_SECRET=your_chatbot_read_api_secret \
+  -e CHATBOT_WRITE_API_KEY=your_chatbot_write_api_key \
+  -e CHATBOT_WRITE_API_SECRET=your_chatbot_write_api_secret \
+  ai-chatbot-service
 ```
 
 ### Generating Security Keys

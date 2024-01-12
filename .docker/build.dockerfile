@@ -1,19 +1,26 @@
-FROM node:16.13.2-alpine as ts-compiler
+# Base image with Node.js 18
+FROM node:18-alpine
+
+# Set working directory in the container
 WORKDIR /usr/app
+
+# Install Python and build dependencies for native modules
+RUN apk add --no-cache python3 make g++
+
+# Copy package.json and package-lock.json (or npm-shrinkwrap.json)
 COPY package*.json ./
-COPY tsconfig*.json ./
+
+# Install all dependencies
 RUN npm install
-COPY . ./
+
+# Copy the source code of the application
+COPY . .
+
+# Build the application
 RUN npm run build
 
-FROM node:16.13.2-alpine as ts-remover
-WORKDIR /usr/app
-COPY --from=ts-compiler /usr/app/package*.json ./
-COPY --from=ts-compiler /usr/app/dist ./
-RUN npm install
+# Expose the port the app runs on
+EXPOSE 3000
 
-FROM node:16.13.2-alpine
-WORKDIR /usr/app
-COPY --from=ts-remover /usr/app ./
-USER 1000
-CMD ["index.js"]
+# Start the application
+CMD ["npm", "run", "start"]
