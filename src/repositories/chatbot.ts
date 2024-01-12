@@ -1,5 +1,5 @@
-import Queries from '#src/lib/db/models/query.js';
-import { Query } from '#src/lib/interfaces/query.js';
+import Queries from '#src/lib/db/models/document.js';
+import { Query } from '#src/lib/interfaces/document.js';
 
 /**
  * Repository object offering data access functions for managing queries in the database.

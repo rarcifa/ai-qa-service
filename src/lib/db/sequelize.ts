@@ -2,7 +2,7 @@ import { logger } from '#src/helpers/logger.js';
 import { Dialect } from 'sequelize';
 import { Sequelize } from 'sequelize-typescript';
 
-import Queries from './models/query.js';
+import Queries from './models/document.js';
 
 import {
   DB_DIALECT,
