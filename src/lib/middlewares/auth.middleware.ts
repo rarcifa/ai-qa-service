@@ -1,10 +1,9 @@
+import { security } from '#src/helpers/security.js';
 import { NextFunction, Request, Response } from 'express';
 
-import { security } from '@helpers/security';
+import { HTTP_CODES, HTTP_MESSAGES, HTTP_STATUS } from '#src/lib/interfaces/status.js';
 
-import { HTTP_CODES, HTTP_MESSAGES, HTTP_STATUS } from '@lib/interfaces/status';
-
-import { CHATBOT_READ_API_SECRET, CHATBOT_WRITE_API_SECRET } from '@helpers/constants';
+import { CHATBOT_READ_API_SECRET, CHATBOT_WRITE_API_SECRET } from '#src/helpers/constants.js';
 
 /**
  * Middleware functions for authorizing read and write operations on a chatbot API.

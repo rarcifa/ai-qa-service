@@ -1,16 +1,15 @@
+import { logger } from '#src/helpers/logger.js';
 import { HNSWLib } from '@langchain/community/vectorstores/hnswlib';
 import { VectorStoreRetriever } from '@langchain/core/vectorstores';
 import { OpenAI, OpenAIEmbeddings } from '@langchain/openai';
 import { loadQARefineChain, RetrievalQAChain } from 'langchain/chains';
-import { ChainValues } from 'langchain/dist/schema';
+import { ChainValues } from 'langchain/dist/schema/index.js';
 import { DirectoryLoader } from 'langchain/document_loaders/fs/directory';
 import { JSONLoader } from 'langchain/document_loaders/fs/json';
 import { TextLoader } from 'langchain/document_loaders/fs/text';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 
-import { logger } from '@helpers/logger';
-
-import { VECTOR_STORE_PATH } from '@helpers/constants';
+import { VECTOR_STORE_PATH } from '#src/helpers/constants.js';
 
 const DEFAULT_MODEL = new OpenAI({
   openAIApiKey: process.env.OPENAI_API_KEY,

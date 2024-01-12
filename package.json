@@ -4,6 +4,10 @@
   "license": "MIT",
   "author": "rarcifa",
   "main": "index.js",
+  "type": "module",
+  "imports": {
+    "#src/*": "./dist/*"
+  },
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
@@ -31,7 +35,6 @@
     "jsonwebtoken": "9.0.1",
     "langchain": "0.1.2",
     "lodash": "4.17.21",
-    "module-alias": "2.2.2",
     "mysql2": "^3.6.5",
     "node-cron": "^3.0.3",
     "openai": "^4.21.0",

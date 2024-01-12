@@ -1,6 +1,6 @@
 import { Column, DataType, Model, Table, Unique } from 'sequelize-typescript';
 
-import { Query } from '@lib/interfaces/query';
+import { Query } from '#src/lib/interfaces/query.js';
 
 @Table({ tableName: 'Queries', timestamps: true })
 export default class Queries extends Model<Query, Query> implements Query {

@@ -1,5 +1,5 @@
-import chatbotRoutes from '@routes/chatbot-routes';
-import healthRoutes from '@routes/health-routes';
+import chatbotRoutes from '#src/routes/chatbot-routes.js';
+import healthRoutes from '#src/routes/health-routes.js';
 import * as express from 'express';
 
 /**

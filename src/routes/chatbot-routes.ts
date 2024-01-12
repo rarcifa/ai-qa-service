@@ -1,9 +1,9 @@
-import { controller } from '@handlers/chatbot/controller';
-import * as validate from '@handlers/chatbot/validator';
-import { middleware } from '@lib/middlewares/auth.middleware';
-import { verifyErrors } from '@lib/middlewares/validation.middleware';
+import { controller } from '#src/handlers/chatbot/controller.js';
+import * as validate from '#src/handlers/chatbot/validator.js';
+import { middleware } from '#src/lib/middlewares/auth.middleware.js';
+import { verifyErrors } from '#src/lib/middlewares/validation.middleware.js';
 
-import { chatbotRouter } from '@helpers/constants';
+import { chatbotRouter } from '#src/helpers/constants.js';
 
 chatbotRouter.post(
   '/generate/query',

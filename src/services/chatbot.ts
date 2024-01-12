@@ -1,5 +1,5 @@
-import { langchain } from '@integrations/langchain-api';
-import { ChainValues } from 'langchain/dist/schema';
+import { langchain } from '#src/integrations/langchain-api.js';
+import { ChainValues } from 'langchain/dist/schema/index.js';
 
 /**
  * Service object for handling query-related operations.

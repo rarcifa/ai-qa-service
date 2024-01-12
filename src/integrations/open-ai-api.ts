@@ -1,8 +1,7 @@
+import { logger } from '#src/helpers/logger.js';
 import OpenAI from 'openai';
 
-import { logger } from '@helpers/logger';
-
-import { OPENAI_API_KEY } from '@helpers/constants';
+import { OPENAI_API_KEY } from '#src/helpers/constants.js';
 
 const openai = new OpenAI({
   apiKey: OPENAI_API_KEY,

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { HTTP_CODES, HTTP_MESSAGES, HTTP_STATUS } from '@lib/interfaces/status';
+import { HTTP_CODES, HTTP_MESSAGES, HTTP_STATUS } from '#src/lib/interfaces/status.js';
 
 /**
  * Asynchronous function for performing a health check of the application.

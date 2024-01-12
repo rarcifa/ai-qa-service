@@ -1,6 +1,6 @@
 import winston, { createLogger, format, transports } from 'winston';
 
-import { IS_PROD_ENV } from '@helpers/constants';
+import { IS_PROD_ENV } from '#src/helpers/constants.js';
 
 /**
  * A Winston log format wrapper that modifies log information for error objects.

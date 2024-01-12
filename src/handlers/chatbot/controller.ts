@@ -1,8 +1,7 @@
+import { service } from '#src/services/chatbot.js';
 import { Request, Response } from 'express';
 
-import { service } from '@services/chatbot';
-
-import { HTTP_CODES, HTTP_STATUS } from '@lib/interfaces/status';
+import { HTTP_CODES, HTTP_STATUS } from '#src/lib/interfaces/status.js';
 
 /**
  * Controller object for managing query-related operations in an Express application.

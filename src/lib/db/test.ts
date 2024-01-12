@@ -1,6 +1,5 @@
+import { logger } from '#src/helpers/logger.js';
 import { Sequelize } from 'sequelize-typescript';
-
-import { logger } from '@helpers/logger';
 
 /**
  * Asynchronously verifies the status of the database connection using a provided Sequelize instance.

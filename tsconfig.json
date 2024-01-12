@@ -1,26 +1,19 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "NodeNext",
     "esModuleInterop": true,
     "target": "es6",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "noImplicitAny": true,
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "sourceMap": true,
     "rootDir": "./src",
     "outDir": "./dist",
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"],
-      "@handlers/*": ["src/handlers/*"],
-      "@helpers/*": ["src/helpers/*"],
-      "@lib/*": ["src/lib/*"],
-      "@config/*": ["src/config/*"],
-      "@services/*": ["src/services/*"],
-      "@repositories/*": ["src/repositories/*"],
-      "@integrations/*": ["src/integrations/*"],
-      "@routes/*": ["src/routes/*"]
+      "#src/*": ["./src/*"],
     },
     "plugins": [
       {

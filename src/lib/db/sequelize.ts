@@ -1,11 +1,18 @@
+import { logger } from '#src/helpers/logger.js';
 import { Dialect } from 'sequelize';
 import { Sequelize } from 'sequelize-typescript';
 
-import { logger } from '@helpers/logger';
+import Queries from './models/query.js';
 
-import Queries from './models/query';
-
-import { DB_DIALECT, DB_HOST, DB_NAME, DB_PASSWORD, DB_PORT, DB_USERNAME, IS_PROD_ENV } from '@helpers/constants';
+import {
+  DB_DIALECT,
+  DB_HOST,
+  DB_NAME,
+  DB_PASSWORD,
+  DB_PORT,
+  DB_USERNAME,
+  IS_PROD_ENV,
+} from '#src/helpers/constants.js';
 
 /**
  * Asynchronously checks and verifies the authentication state of the database connection.

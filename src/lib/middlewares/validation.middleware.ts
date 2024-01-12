@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { Result, ValidationError, validationResult } from 'express-validator';
 
-import { HTTP_CODES, VerificationErrorModel } from '@lib/interfaces/status';
+import { HTTP_CODES, VerificationErrorModel } from '#src/lib/interfaces/status.js';
 
 /**
  * Middleware for checking and handling validation errors in an Express request.
