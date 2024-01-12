@@ -3,17 +3,17 @@ import { NextFunction, Request, Response } from 'express';
 
 import { HTTP_CODES, HTTP_MESSAGES, HTTP_STATUS } from '#src/lib/interfaces/status.js';
 
-import { CHATBOT_READ_API_SECRET, CHATBOT_WRITE_API_SECRET } from '#src/helpers/constants.js';
+import { QA_READ_API_SECRET, QA_WRITE_API_SECRET } from '#src/helpers/constants.js';
 
 /**
- * Middleware functions for authorizing read and write operations on a chatbot API.
+ * Middleware functions for authorizing read and write operations on a qa API.
  *
  * @fileoverview This file contains functions to validate API keys for both read and write access.
  * @namespace middleware
  */
 export const middleware = {
   /**
-   * Middleware for authorizing read operations. Validates the 'x-api-key' header against the CHATBOT_READ_API_SECRET.
+   * Middleware for authorizing read operations. Validates the 'x-api-key' header against the QA_READ_API_SECRET.
    * If the API key is valid, it allows the request to proceed. Otherwise, it responds with an unauthorized status.
    *
    * @async
@@ -28,7 +28,7 @@ export const middleware = {
   authorizehRead: async (req: Request, res: Response, next: NextFunction): Promise<void | Response> => {
     try {
       const apiKey: string = req.header('x-api-key');
-      const isValidApiKey: boolean = security.authenticateApiKey(CHATBOT_READ_API_SECRET, apiKey);
+      const isValidApiKey: boolean = security.authenticateApiKey(QA_READ_API_SECRET, apiKey);
 
       if (!isValidApiKey) {
         return res.status(HTTP_CODES.UNAUTHORIZED).json({
@@ -49,7 +49,7 @@ export const middleware = {
   },
 
   /**
-   * Middleware for authorizing write operations. Validates the 'x-api-key' header against the CHATBOT_WRITE_API_SECRET.
+   * Middleware for authorizing write operations. Validates the 'x-api-key' header against the QA_WRITE_API_SECRET.
    * If the API key is valid, it allows the request to proceed. Otherwise, it responds with an unauthorized status.
    *
    * @async
@@ -68,7 +68,7 @@ export const middleware = {
   authorizehWrite: async (req: Request, res: Response, next: NextFunction): Promise<void | Response> => {
     try {
       const apiKey: string = req.header('x-api-key');
-      const isValidApiKey: boolean = security.authenticateApiKey(CHATBOT_WRITE_API_SECRET, apiKey);
+      const isValidApiKey: boolean = security.authenticateApiKey(QA_WRITE_API_SECRET, apiKey);
 
       if (!isValidApiKey) {
         return res.status(HTTP_CODES.UNAUTHORIZED).json({

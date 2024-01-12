@@ -1,4 +1,4 @@
-import { service } from '#src/services/chatbot.js';
+import { service } from '#src/services/qa.js';
 import { Request, Response } from 'express';
 
 import { HTTP_CODES, HTTP_STATUS } from '#src/lib/interfaces/status.js';

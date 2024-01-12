@@ -1,4 +1,4 @@
-# AI Chatbot Service
+# AI QA Service
 
 ![Version Badge](https://img.shields.io/badge/Version-v1.0.0-blue)
 ![Version Badge](https://img.shields.io/badge/Node-v18.0.0-yellow)
@@ -6,9 +6,9 @@
 
 ## Overview
 
-The AI Chatbot Service is a Node.js TypeScript application designed to host chatbot services utilizing the LangChain library and OpenAI integrations. This document provides detailed instructions on setting up, configuring, and running the service, including Docker containerization and security key generation.
+The AI QA Service is a Node.js TypeScript application designed to host qa services utilizing the LangChain library and OpenAI integrations. This document provides detailed instructions on setting up, configuring, and running the service, including Docker containerization and security key generation.
 
-![Diagrame](https://i.postimg.cc/Fm3Zqhgv/architecture-diagram.jpg)
+![Diagrame](https://i.postimg.cc/1zS94PWf/Crypto-org-Cronos-Diagram-29.jpg)
 
 ## Table of Contents
 
@@ -60,7 +60,7 @@ npm run dev
 1. Build the Docker image using the provided Dockerfile:
 
 ```bash
-docker build -f .docker/build.dockerfile -t ai-chatbot-service .
+docker build -f .docker/build.dockerfile -t ai-qa-service .
 ```
 
 2. Run the service using Docker:
@@ -73,11 +73,11 @@ docker run -it --init \
   -e DB_PASSWORD=your_db_password \
   -e NODE_ENV=your_node_env \
   -e OPENAI_API_KEY=your_openai_api_key \
-  -e CHATBOT_READ_API_KEY=your_chatbot_read_api_key \
-  -e CHATBOT_READ_API_SECRET=your_chatbot_read_api_secret \
-  -e CHATBOT_WRITE_API_KEY=your_chatbot_write_api_key \
-  -e CHATBOT_WRITE_API_SECRET=your_chatbot_write_api_secret \
-  ai-chatbot-service
+  -e QA_READ_API_KEY=your_qa_read_api_key \
+  -e QA_READ_API_SECRET=your_qa_read_api_secret \
+  -e QA_WRITE_API_KEY=your_qa_write_api_key \
+  -e QA_WRITE_API_SECRET=your_qa_write_api_secret \
+  ai-qa-service
 ```
 
 ### Generating Security Keys
@@ -103,11 +103,11 @@ Set the following environment variables in a `.env` file:
 - `DB_HOST`, `DB_NAME`, `DB_USERNAME`, `DB_PASSWORD` for database configuration.
 - `NODE_ENV` for setting the environment (development, production, etc.).
 - `OPENAI_API_KEY` for OpenAI integration.
-- `CHATBOT_READ_API_KEY`, `CHATBOT_READ_API_SECRET`, `CHATBOT_WRITE_API_KEY`, `CHATBOT_WRITE_API_SECRET` for chatbot service authentication. These keys can be generated with the previous functions (e.g. apiKey, apiSecret).
+- `QA_READ_API_KEY`, `QA_READ_API_SECRET`, `QA_WRITE_API_KEY`, `QA_WRITE_API_SECRET` for qa service authentication. These keys can be generated with the previous functions (e.g. apiKey, apiSecret).
 
 ### Local Document Context
 
-To provide contextual information to the LangChain library, you can place `.txt` or `.json` files in the `src/integrations/docs` folder. The content of these files will be used to create local vectors for enhanced chatbot responses.
+To provide contextual information to the LangChain library, you can place `.txt` or `.json` files in the `src/integrations/docs` folder. The content of these files will be used to create local vectors for enhanced qa responses.
 
 - Utilize the createLoader function in LangChain to load these documents:
 
@@ -122,7 +122,7 @@ createLoader: (): DirectoryLoader => {
 
 ### Endpoints
 
-The service exposes various endpoints for chatbot interactions:
+The service exposes various endpoints for qa interactions:
 
 1. Health Check:
 
@@ -133,7 +133,7 @@ GET /healthcheck
 2. Generate Query:
 
 ```bash
-POST /api/v1/chatbot-service/generate/query
+POST /api/v1/qa-service/generate/query
 ```
 
 - Body example for POST request:
