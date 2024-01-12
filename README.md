@@ -6,7 +6,7 @@
 
 ## Overview
 
-The AI QA Service is a Node.js TypeScript application designed to host qa services utilizing the LangChain library and OpenAI integrations. This document provides detailed instructions on setting up, configuring, and running the service, including Docker containerization and security key generation.
+The AI QA Service is a Node.js TypeScript application designed to host QA services utilizing the LangChain library and OpenAI integrations. This document provides detailed instructions on setting up, configuring, and running the service, including Docker containerization and security key generation.
 
 ![Diagrame](https://i.postimg.cc/1zS94PWf/Crypto-org-Cronos-Diagram-29.jpg)
 

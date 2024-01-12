@@ -18,18 +18,13 @@ export const DB_DIALECT: string = process.env.DB_DIALECT || 'postgres';
 
 // urls
 export const API_BASE_URL: string = process.env.API_BASE_URL || '';
-export const DATA_FOR_SEO_BASE_API: string = process.env.DATA_FOR_SEO_BASE_API || '';
-export const BING_SEARCH_V7_ENDPOINT: string = process.env.BING_SEARCH_V7_ENDPOINT || '';
 
 // keys
 export const QA_READ_API_KEY: string = process.env.QA_READ_API_KEY;
 export const QA_READ_API_SECRET: string = process.env.QA_READ_API_SECRET;
 export const QA_WRITE_API_KEY: string = process.env.QA_WRITE_API_KEY;
 export const QA_WRITE_API_SECRET: string = process.env.QA_WRITE_API_SECRET;
-export const DATA_FOR_SEO_USERNAME: string = process.env.DATA_FOR_SEO_USERNAME || '';
-export const DATA_FOR_SEO_PASSWORD: string = process.env.DATA_FOR_SEO_PASSWORD || '';
 export const OPENAI_API_KEY: string = process.env.OPENAI_API_KEY || '';
-export const BING_SEARCH_V7_SUBSCRIPTION_KEY: string = process.env.BING_SEARCH_V7_SUBSCRIPTION_KEY || '';
 
 // router
 export const qaRouter: Router = express.Router();

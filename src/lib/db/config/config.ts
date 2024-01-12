@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const config = {
+export const config = {
   development: {
     username: process.env.DB_USERNAME || '',
     password: process.env.DB_PASSWORD || '',
@@ -34,6 +34,3 @@ const config = {
     port: process.env.DB_PORT || '5432',
   },
 };
-
-export { config };
-module.exports = config;

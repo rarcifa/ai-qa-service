@@ -1,9 +1,9 @@
 import { Column, DataType, Model, Table, Unique } from 'sequelize-typescript';
 
-import { Query } from '#src/lib/interfaces/query.js';
+import { Document } from '#src/lib/interfaces/document.js';
 
 @Table({ tableName: 'Queries', timestamps: true })
-export default class Queries extends Model<Query, Query> implements Query {
+export default class Documents extends Model<Document, Document> implements Document {
   @Column({
     type: DataType.STRING,
     primaryKey: true,
@@ -12,7 +12,7 @@ export default class Queries extends Model<Query, Query> implements Query {
 
   @Unique
   @Column
-  query!: string;
+  document!: string;
 
   @Column({ allowNull: true, type: DataType.DATE })
   createdAt?: Date;

@@ -1,6 +1,6 @@
-export interface Query {
+export interface Document {
   id: string;
-  query: string;
+  document: string;
   createdAt?: Date;
   updatedAt?: Date;
 }
