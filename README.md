@@ -1,4 +1,4 @@
-# AI Chatbot Service Documentation
+# AI Chatbot Service
 
 ![Version Badge](https://img.shields.io/badge/Version-v1.0.0-blue)
 ![Version Badge](https://img.shields.io/badge/Node-v18.0.0-yellow)
