@@ -30,6 +30,19 @@ The AI QA Service is a Node.js TypeScript application designed to host QA servic
 - npm v9.4.0 or later
 - Docker (for containerization)
 - TypeScript knowledge (for development)
+- C++ build tools for native module compilation. This is required for the `hnswlib-node` module. Depending on your operating system, the installation steps may vary:
+  - For **Windows**, install the [Windows Build Tools](https://www.npmjs.com/package/windows-build-tools) via npm:
+    ```bash
+    npm install --global windows-build-tools
+    ```
+  - For **macOS**, you need Xcode Command Line Tools. You can install them by running:
+    ```bash
+    xcode-select --install
+    ```
+  - For **Linux** distributions, you need to install `build-essential` and other necessary development tools. For example, on Ubuntu or Debian-based systems, run:
+    ```bash
+    sudo apt-get install build-essential
+    ```
 
 ### Setting Up the Project
 
@@ -37,48 +50,48 @@ The AI QA Service is a Node.js TypeScript application designed to host QA servic
 2. Navigate to the project directory.
 3. Install dependencies:
 
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
 ### Running the Service
 
 1. Compile TypeScript files to JavaScript:
 
-```bash
-npm run build
-```
+    ```bash
+    npm run build
+    ```
 
 2. Run the service in development mode:
 
-```bash
-npm run dev
-```
+    ```bash
+    npm run dev
+    ```
 
 ### Docker
 
 1. Build the Docker image using the provided Dockerfile:
 
-```bash
-docker build -f .docker/build.dockerfile -t ai-qa-service .
-```
+    ```bash
+    docker build -f .docker/build.dockerfile -t ai-qa-service .
+    ```
 
 2. Run the service using Docker:
 
-```bash
-docker run -it --init \
-  -e DB_HOST=your_db_host \
-  -e DB_NAME=your_db_name \
-  -e DB_USERNAME=your_db_username \
-  -e DB_PASSWORD=your_db_password \
-  -e NODE_ENV=your_node_env \
-  -e OPENAI_API_KEY=your_openai_api_key \
-  -e QA_READ_API_KEY=your_qa_read_api_key \
-  -e QA_READ_API_SECRET=your_qa_read_api_secret \
-  -e QA_WRITE_API_KEY=your_qa_write_api_key \
-  -e QA_WRITE_API_SECRET=your_qa_write_api_secret \
-  ai-qa-service
-```
+    ```bash
+    docker run -it --init \
+      -e DB_HOST=your_db_host \
+      -e DB_NAME=your_db_name \
+      -e DB_USERNAME=your_db_username \
+      -e DB_PASSWORD=your_db_password \
+      -e NODE_ENV=your_node_env \
+      -e OPENAI_API_KEY=your_openai_api_key \
+      -e QA_READ_API_KEY=your_qa_read_api_key \
+      -e QA_READ_API_SECRET=your_qa_read_api_secret \
+      -e QA_WRITE_API_KEY=your_qa_write_api_key \
+      -e QA_WRITE_API_SECRET=your_qa_write_api_secret \
+      ai-qa-service
+    ```
 
 ### Generating Security Keys
 
@@ -86,15 +99,15 @@ The `security` module in the application provides functions for generating secur
 
 1. To generate an API key:
 
-```ts
-const apiKey = security.generateApiKey();
-```
+    ```ts
+    const apiKey = security.generateApiKey();
+    ```
 
 2. To generate an API secret for a given key:
 
-```ts
-const apiSecret = security.generateApiSecret('your-key');
-```
+    ```ts
+    const apiSecret = security.generateApiSecret('your-key');
+    ```
 
 ### Environment Variables
 
@@ -111,14 +124,14 @@ To provide contextual information to the LangChain library, you can place `.txt`
 
 - Utilize the createLoader function in LangChain to load these documents:
 
-```ts
-createLoader: (): DirectoryLoader => {
-  return new DirectoryLoader('./src/integrations/docs', {
-    '.json': (path) => new JSONLoader(path),
-    '.txt': (path) => new TextLoader(path),
-  });
-};
-```
+    ```ts
+    createLoader: (): DirectoryLoader => {
+      return new DirectoryLoader('./src/integrations/docs', {
+        '.json': (path) => new JSONLoader(path),
+        '.txt': (path) => new TextLoader(path),
+      });
+    };
+    ```
 
 ### Endpoints
 
@@ -126,23 +139,23 @@ The service exposes various endpoints for qa interactions:
 
 1. Health Check:
 
-```bash
-GET /healthcheck
-```
+    ```bash
+    GET /healthcheck
+    ```
 
 2. Generate Query:
 
-```bash
-POST /api/v1/qa-service/generate/query
-```
+    ```bash
+    POST /api/v1/qa-service/generate/query
+    ```
 
 - Body example for POST request:
 
-```bash
-{
-  "query": "Help me to get started with the cronos chain..."
-}
-```
+    ```bash
+    {
+      "query": "Help me to get started with the cronos chain..."
+    }
+    ```
 
 ### VS Code Configuration
 
