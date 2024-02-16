@@ -1,5 +1,5 @@
-import Queries from '#src/lib/db/models/document.js';
-import { Query } from '#src/lib/interfaces/document.js';
+import Documents from '#src/lib/db/models/document.js';
+import { Document } from '#src/lib/interfaces/document.js';
 
 /**
  * Repository object offering data access functions for managing queries in the database.
@@ -9,18 +9,18 @@ import { Query } from '#src/lib/interfaces/document.js';
  */
 export const repository = {
   /**
-   * Asynchronously creates a new query instance in the database.
-   * This function takes a 'Query' object as input and persists it in the database using the 'Queries' model.
+   * Asynchronously creates a new document instance in the database.
+   * This function takes a 'Document' object as input and persists it in the database using the 'Queries' model.
    *
    * @async
-   * @param {Query} data - The 'Query' data object containing the information to be stored.
-   * @returns {Promise<Query>} A promise that resolves with the newly created 'Query' instance after it's successfully added to the database.
+   * @param {Document} data - The 'Document' data object containing the information to be stored.
+   * @returns {Promise<Document>} A promise that resolves with the newly created 'Document' instance after it's successfully added to the database.
    *
    * @example
-   * const newQueryData = { title: 'New Query', description: 'Details of the new query' };
-   * repository.createQuery(newQueryData)
+   * const newDocumentData = { title: 'New Document', description: 'Details of the new document' };
+   * repository.createDocument(newDocumentData)
    */
-  createQuery: async (data: Query): Promise<Query> => {
-    return Queries.create(data);
+  createDocument: async (data: Document): Promise<Document> => {
+    return Documents.create(data);
   },
 };

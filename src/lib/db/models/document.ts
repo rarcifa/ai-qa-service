@@ -2,7 +2,7 @@ import { Column, DataType, Model, Table, Unique } from 'sequelize-typescript';
 
 import { Document } from '#src/lib/interfaces/document.js';
 
-@Table({ tableName: 'Queries', timestamps: true })
+@Table({ tableName: 'Documents', timestamps: true })
 export default class Documents extends Model<Document, Document> implements Document {
   @Column({
     type: DataType.STRING,
